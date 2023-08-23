@@ -1,0 +1,175 @@
+:root {
+  box-sizing: border-box;
+
+  /* Font */
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  font-family: "Libre Baskerville", serif;
+  font-smooth: always;
+  leading-trim: both;
+  text-edge: cap alphabetic;
+  text-rendering: optimizeLegibility;
+}
+
+*,
+*::before,
+*::after {
+  appearance: none;
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 8rem 5vw;
+}
+
+main {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 28rem;
+  width: 100%;
+}
+
+section,
+section > div,
+section > div > div {
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  gap: 4rem;
+  width: 100%;
+}
+
+section > div {
+  gap: 2rem;
+}
+
+section > div > div {
+  gap: 0.5rem;
+}
+
+a,
+h1,
+h2,
+h3,
+li,
+p {
+  font-size: 0.875rem;
+  font-weight: normal;
+}
+
+a,
+p {
+  color: rgba(0, 0, 0, 0.5);
+  line-height: 180%;
+}
+
+a {
+  align-items: center;
+  display: flex;
+  gap: 0.25rem;
+  text-decoration: none;
+  transition: color 0.1s ease-out;
+}
+
+a.coming {
+  cursor: not-allowed;
+  user-select: none;
+}
+
+a.coming::after {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 9999px;
+  content: "Coming soon";
+  font-size: 0.75rem;
+  line-height: 100%;
+  padding: 0.125rem 0.5rem;
+}
+
+a:not(.coming):hover {
+  color: rgba(0, 0, 0, 1);
+  text-decoration: underline;
+}
+
+h1 {
+  line-height: 100%;
+}
+
+h2 {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  font-weight: normal;
+  line-height: 120%;
+  margin: 0 auto;
+  max-width: fit-content;
+  padding-top: 1rem;
+  text-align: center;
+}
+
+h3 {
+  color: rgba(0, 0, 0, 0.75);
+  line-height: 140%;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+}
+
+main li {
+  display: flex;
+  flex-grow: 1;
+  width: calc(50% - 0.25rem);
+}
+
+main li img {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  height: 5.25rem;
+  object-fit: contain;
+  opacity: 0.5;
+  padding: 1.5rem;
+  transition: border-color 0.1s ease-out, opacity 0.1s ease-out;
+  width: 100%;
+}
+
+li img:hover {
+  border-color: rgba(0, 0, 0, 0.05);
+  opacity: 1;
+}
+
+footer {
+  margin-top: 8rem;
+}
+
+footer a {
+  opacity: 0.25;
+  transition: opacity 0.1s ease-out;
+}
+
+footer a:hover {
+  opacity: 0.75;
+}
+
+footer a:active {
+  opacity: 1;
+}
+
+footer img {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+footer ul {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
